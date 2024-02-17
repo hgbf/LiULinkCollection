@@ -1,0 +1,4 @@
+.resize-animation-stopper * {
+  transition-duration: 0 !important;
+  transition: none !important;
+}/*# sourceMappingURL=general.css.map */

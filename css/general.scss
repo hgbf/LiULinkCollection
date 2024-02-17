@@ -1,0 +1,7 @@
+.resize-animation-stopper * {
+    transition-duration: 0 !important;
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}

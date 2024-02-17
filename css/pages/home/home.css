@@ -1,0 +1,178 @@
+body {
+  --bgColor: #cfe3f2;
+  --buttonColor: #eef6fa;
+  --buttonColorHover: #e3ebf0;
+  --fgColor: #0a0f12;
+  --dropShadow: drop-shadow(0 2px 1px rgba(0, 0, 0, 0.1));
+  --borderRadius: 0.5rem;
+  background-color: var(--bgColor);
+}
+body * {
+  font-family: "Lato", sans-serif;
+  color: var(--fgColor);
+  transition-duration: 0.4s;
+}
+
+body.darkMode {
+  --bgColor: #121212;
+  --buttonColor: #272727;
+  --buttonColorHover: #2f2f2f;
+  --fgColor: #ddddde;
+}
+
+.hidden, .hidden * {
+  display: none !important;
+}
+
+.mainContent {
+  --contentWidth: 60vw;
+  width: var(--contentWidth);
+  margin: 8rem auto;
+}
+.mainContent h1 {
+  margin-bottom: 2rem;
+}
+.mainContent h2 {
+  margin: 4rem 0 2rem 0;
+}
+.mainContent .largeLinks {
+  display: flex;
+  justify-content: space-between;
+}
+.mainContent .largeLinks .linkContainer {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: var(--borderRadius);
+  align-items: center;
+  justify-content: center;
+  background-color: var(--buttonColor);
+  height: 12rem;
+  width: calc(var(--contentWidth) / 6 - 0.8333333333rem);
+  filter: var(--dropShadow);
+}
+.mainContent .largeLinks .linkContainer .linkIcon {
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 0.5rem;
+  fill: var(--fgColor);
+}
+.mainContent .largeLinks .linkContainer p {
+  margin: 0;
+}
+.mainContent .largeLinks .linkContainer:hover {
+  background-color: var(--buttonColorHover);
+}
+.mainContent .otherLinksTitleBar {
+  display: flex;
+  align-items: baseline;
+  margin: 4rem 0 2rem 0;
+}
+.mainContent .otherLinksTitleBar h2 {
+  margin: 0;
+  margin-right: 2rem;
+}
+.mainContent .otherLinksTitleBar p.underlined {
+  margin: 0;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.mainContent .otherLinks, .mainContent .pinnedLinks {
+  width: 100%;
+}
+.mainContent .otherLinks .linkContainer, .mainContent .pinnedLinks .linkContainer {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  filter: var(--dropShadow);
+}
+.mainContent .otherLinks .linkContainer a, .mainContent .pinnedLinks .linkContainer a {
+  transition-duration: 0.4s;
+  display: block;
+  height: 100%;
+  overflow: visible;
+  height: 3.2rem;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  border-radius: var(--borderRadius);
+  background-color: var(--buttonColor);
+  flex-grow: 1;
+}
+.mainContent .otherLinks .linkContainer .pinIcon, .mainContent .pinnedLinks .linkContainer .pinIcon {
+  transition-duration: 0.4s;
+  margin-left: 0.5rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  box-sizing: border-box;
+  padding: 0.8rem;
+  cursor: pointer;
+  fill: var(--fgColor);
+  border-radius: var(--borderRadius);
+  background-color: var(--buttonColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainContent .otherLinks .linkContainer .pinIcon svg, .mainContent .pinnedLinks .linkContainer .pinIcon svg {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+.mainContent .otherLinks .linkContainer:not(:last-child), .mainContent .pinnedLinks .linkContainer:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+.mainContent .otherLinks .linkContainer:hover a, .mainContent .pinnedLinks .linkContainer:hover a {
+  background-color: var(--buttonColorHover);
+}
+.mainContent .otherLinks .linkContainer:hover .pinIcon, .mainContent .pinnedLinks .linkContainer:hover .pinIcon {
+  background-color: var(--buttonColorHover);
+}
+.mainContent .generalInfo {
+  width: 100%;
+  border-radius: var(--borderRadius);
+  border: solid 0.15rem var(--buttonColor);
+  border-left: solid 1rem var(--buttonColor);
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+}
+.mainContent .darkModeButton {
+  margin-top: 4rem;
+  padding: 1rem 2rem;
+  border-radius: var(--borderRadius);
+  background-color: var(--buttonColor);
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+.mainContent .darkModeButton:hover {
+  background-color: var(--buttonColorHover);
+}
+.mainContent footer {
+  margin-top: 8rem;
+}
+
+@media screen and (max-aspect-ratio: 4/3) {
+  .mainContent {
+    --contentWidth: 80vw;
+    margin: 4rem auto;
+  }
+  .mainContent .largeLinks {
+    flex-direction: column;
+  }
+  .mainContent .largeLinks .linkContainer {
+    width: 100%;
+    height: 8rem;
+    flex-direction: row;
+    margin-bottom: 1rem;
+    justify-content: left;
+    padding: 0 2rem;
+  }
+  .mainContent .largeLinks .linkContainer .linkIcon {
+    margin-bottom: 0;
+    margin-right: 1rem;
+  }
+  .mainContent .otherLinks a {
+    width: 100%;
+  }
+}/*# sourceMappingURL=home.css.map */
